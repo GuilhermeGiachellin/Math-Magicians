@@ -1,13 +1,17 @@
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Math Magicians build version 01 test
-        </p>
-      </header>
-    </div>
-  );
-}
+/* eslint-disable no-unused-vars */
+/* eslint-disable class-methods-use-this */
+import React from 'react';
+import Calculator from './components/Calculator.js';
 
-export default App;
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  render() {
+    return (
+    <Calculator />
+    );
+  }
+}
