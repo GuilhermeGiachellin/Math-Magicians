@@ -1,11 +1,12 @@
+/* eslint-disable no-unused-vars */
+import Calculator from './components/Calculator.js';
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Math Magicians build version 01 test
-        </p>
-      </header>
+      <div>
+        <Calculator />
+      </div>
     </div>
   );
 }
