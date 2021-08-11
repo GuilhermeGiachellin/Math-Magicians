@@ -1,4 +1,4 @@
-.App {
+#root {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +23,7 @@ td {
   height: 40px;
   margin: 0;
   border: 1px solid #cacaca;
-  background-color: #e4e4e4;
+  background-color: #e4e4e4;  
 }
 
 .orange {
