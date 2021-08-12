@@ -2,6 +2,10 @@
 
 > A simple calculator constructed with React.
 
+## Image Preview
+
+![image](https://user-images.githubusercontent.com/81584449/129240837-ab025254-efc2-4817-966a-3d386442b287.png)
+
 ### Usage
 
 - Clone the repo.
