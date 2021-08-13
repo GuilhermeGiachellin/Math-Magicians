@@ -1,82 +1,72 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useState } from 'react';
 import CalcButtons from './Button.js';
 import calculate from '../logic/calculate.js';
 
 /* eslint-disable class-methods-use-this */
-export default class Calculator extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      display: '0',
-      currentOp: {
-        total: '0',
-        next: null,
-        operation: null,
-      },
-    };
-    this.clickHandler = this.clickHandler.bind(this);
-  }
+export default function Calculator() {
+  const [obj, setObj] = useState({
+    total: '0',
+    next: null,
+    operation: null,
+  });
 
-  clickHandler = (e) => {
-    const { currentOp } = this.state;
-    this.setState({ total: e.target.value });
-    const result = calculate(currentOp, e.target.value);
-    this.setState({ currentOp: this.updateOperation(result) });
-  };
-
-  updateOperation = ({ next, total, operation }) => {
-    const { currentOp } = this.state;
+  const updateOperation = ({ next, total, operation }) => {
     if (total || total === null) {
-      currentOp.total = total;
+      obj.total = total;
     }
     if (next || next === null) {
-      currentOp.next = next;
+      obj.next = next;
     }
     if (operation || operation === null) {
-      currentOp.operation = operation;
+      obj.operation = operation;
     }
-    return currentOp;
-  }
+    return obj;
+  };
 
-  render() {
-    return (
+  const clickHandler = (e) => {
+    const result = calculate(obj, e.target.value);
+    const { next, total, operation } = updateOperation(result);
+    setObj({ next, total, operation });
+  };
+
+  return (
               <table>
                   <tbody>
               <tr>
-                  <td colSpan="4" className="display">{this.state.currentOp.next === null ? this.state.currentOp.total : this.state.currentOp.next}</td>
+                  <td colSpan="4" className="display">{obj.next === null ? obj.total : obj.next}
+                  </td>
               </tr>
               <tr>
-                  <td><CalcButtons number="AC" clickHandler={this.clickHandler} /></td>
-                  <td><CalcButtons number="+/-" clickHandler={this.clickHandler} /></td>
-                  <td><CalcButtons number="%"clickHandler={this.clickHandler} /></td>
-                  <td className="orange"><CalcButtons number="÷"clickHandler={this.clickHandler} /></td>
+                  <td><CalcButtons number="AC" clickHandler={clickHandler} /></td>
+                  <td><CalcButtons number="+/-" clickHandler={clickHandler} /></td>
+                  <td><CalcButtons number="%"clickHandler={clickHandler} /></td>
+                  <td className="orange"><CalcButtons number="÷"clickHandler={clickHandler} /></td>
               </tr>
               <tr>
-                  <td><CalcButtons number="7"clickHandler={this.clickHandler} /></td>
-                  <td><CalcButtons number="8"clickHandler={this.clickHandler} /></td>
-                  <td><CalcButtons number="9"clickHandler={this.clickHandler} /></td>
-                  <td className="orange"><CalcButtons number="x"clickHandler={this.clickHandler} /></td>
+                  <td><CalcButtons number="7"clickHandler={clickHandler} /></td>
+                  <td><CalcButtons number="8"clickHandler={clickHandler} /></td>
+                  <td><CalcButtons number="9"clickHandler={clickHandler} /></td>
+                  <td className="orange"><CalcButtons number="x"clickHandler={clickHandler} /></td>
               </tr>
               <tr>
-                  <td><CalcButtons number="4"clickHandler={this.clickHandler} /></td>
-                  <td><CalcButtons number="5"clickHandler={this.clickHandler} /></td>
-                  <td><CalcButtons number="6"clickHandler={this.clickHandler} /></td>
-                  <td className="orange"><CalcButtons number="-"clickHandler={this.clickHandler} /></td>
+                  <td><CalcButtons number="4"clickHandler={clickHandler} /></td>
+                  <td><CalcButtons number="5"clickHandler={clickHandler} /></td>
+                  <td><CalcButtons number="6"clickHandler={clickHandler} /></td>
+                  <td className="orange"><CalcButtons number="-"clickHandler={clickHandler} /></td>
               </tr>
               <tr>
-                  <td><CalcButtons number="1"clickHandler={this.clickHandler} /></td>
-                  <td><CalcButtons number="2"clickHandler={this.clickHandler} /></td>
-                  <td><CalcButtons number="3"clickHandler={this.clickHandler} /></td>
-                  <td className="orange"><CalcButtons number="+"clickHandler={this.clickHandler} /></td>
+                  <td><CalcButtons number="1"clickHandler={clickHandler} /></td>
+                  <td><CalcButtons number="2"clickHandler={clickHandler} /></td>
+                  <td><CalcButtons number="3"clickHandler={clickHandler} /></td>
+                  <td className="orange"><CalcButtons number="+"clickHandler={clickHandler} /></td>
               </tr>
               <tr>
-                  <td colSpan="2"><CalcButtons number="0"clickHandler={this.clickHandler} /></td>
-                  <td><CalcButtons number="."clickHandler={this.clickHandler} /></td>
-                  <td className="orange"><CalcButtons number="="clickHandler={this.clickHandler} /></td>
+                  <td colSpan="2"><CalcButtons number="0"clickHandler={clickHandler} /></td>
+                  <td><CalcButtons number="."clickHandler={clickHandler} /></td>
+                  <td className="orange"><CalcButtons number="="clickHandler={clickHandler} /></td>
               </tr>
               </tbody>
           </table>
-    );
-  }
+  );
 }
