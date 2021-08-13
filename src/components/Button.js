@@ -1,9 +1,6 @@
-import React from 'react';
-
-export default class CalcButtons extends React.Component {
-  render() {
-    const { number, clickHandler } = this.props;
-    return (
+export default function CalcButtons(props) {
+  const { number, clickHandler } = props;
+  return (
             <button
                 className={`btn-${number}`}
                 type="button"
@@ -11,6 +8,5 @@ export default class CalcButtons extends React.Component {
                 value={number}>
             {number}
             </button>
-    );
-  }
+  );
 }
