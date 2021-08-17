@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import CalcButtons from './Button.js';
 import calculate from '../logic/calculate.js';
+import './calculator.css';
 
 /* eslint-disable class-methods-use-this */
 export default function Calculator() {
@@ -31,6 +32,11 @@ export default function Calculator() {
   };
 
   return (
+              <div className="calculator_cnt">
+                <div>
+                  <h1>Let's do some Math!</h1>
+                </div>
+                <div>
               <table>
                   <tbody>
               <tr>
@@ -68,5 +74,7 @@ export default function Calculator() {
               </tr>
               </tbody>
           </table>
+          </div>
+          </div>
   );
 }

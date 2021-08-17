@@ -13,9 +13,15 @@ export default function operate(numberOne, numberTwo, operation) {
     return one.times(two).toString();
   }
   if (operation === '÷') {
+    if (!Number(numberTwo)) {
+      return 'Cannot divide by 0';
+    }
     return one.div(two).toString();
   }
   if (operation === '%') {
+    if (!Number(numberTwo)) {
+      return '0';
+    }
     return one.mod(two).toString();
   }
   throw Error(`Unknown operation '${operation}'`);
