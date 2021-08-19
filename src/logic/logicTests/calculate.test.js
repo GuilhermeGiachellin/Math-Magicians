@@ -125,3 +125,17 @@ describe('positive or negative', () => {
     expect(calculate(obj1, '+/-')).toMatchObject(obj2);
   });
 });
+
+describe('positive or negative', () => {
+  const obj1 = {
+    total: '1',
+    next: '1',
+    operation: '.',
+  };
+  const obj2 = {
+    next: '1.',
+  };
+  test('positive or negative', () => {
+    expect(calculate(obj1, '.')).toMatchObject(obj2);
+  });
+});
