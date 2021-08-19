@@ -126,7 +126,7 @@ describe('positive or negative', () => {
   });
 });
 
-describe('positive or negative', () => {
+describe('Button dot', () => {
   const obj1 = {
     total: '1',
     next: '1',
@@ -135,7 +135,7 @@ describe('positive or negative', () => {
   const obj2 = {
     next: '1.',
   };
-  test('positive or negative', () => {
+  test('Button dot', () => {
     expect(calculate(obj1, '.')).toMatchObject(obj2);
   });
 });
