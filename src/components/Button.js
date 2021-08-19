@@ -2,10 +2,11 @@ export default function CalcButtons(props) {
   const { number, clickHandler } = props;
   return (
             <button
-                className={`btn-${number}`}
+                id={`btn-${number}`}
                 type="button"
                 onClick={clickHandler}
-                value={number}>
+                value={number}
+                name={number}>
             {number}
             </button>
   );
