@@ -1,0 +1,292 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Renders the Button 1`] = `
+<button
+  id="btn-undefined"
+  type="button"
+/>
+`;
+
+exports[`Calculator Renders the Calculator 1`] = `
+<div
+  className="calculator_cnt"
+>
+  <div>
+    <h1>
+      Let's do some Math!
+    </h1>
+  </div>
+  <div>
+    <table>
+      <tbody>
+        <tr>
+          <td
+            className="display"
+            colSpan="4"
+            id="display"
+          >
+            0
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button
+              id="btn-AC"
+              name="AC"
+              onClick={[Function]}
+              type="button"
+              value="AC"
+            >
+              AC
+            </button>
+          </td>
+          <td>
+            <button
+              id="btn-+/-"
+              name="+/-"
+              onClick={[Function]}
+              type="button"
+              value="+/-"
+            >
+              +/-
+            </button>
+          </td>
+          <td>
+            <button
+              id="btn-%"
+              name="%"
+              onClick={[Function]}
+              type="button"
+              value="%"
+            >
+              %
+            </button>
+          </td>
+          <td
+            className="orange"
+          >
+            <button
+              id="btn-÷"
+              name="÷"
+              onClick={[Function]}
+              type="button"
+              value="÷"
+            >
+              ÷
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button
+              id="btn-7"
+              name="7"
+              onClick={[Function]}
+              type="button"
+              value="7"
+            >
+              7
+            </button>
+          </td>
+          <td>
+            <button
+              id="btn-8"
+              name="8"
+              onClick={[Function]}
+              type="button"
+              value="8"
+            >
+              8
+            </button>
+          </td>
+          <td>
+            <button
+              id="btn-9"
+              name="9"
+              onClick={[Function]}
+              type="button"
+              value="9"
+            >
+              9
+            </button>
+          </td>
+          <td
+            className="orange"
+          >
+            <button
+              id="btn-x"
+              name="x"
+              onClick={[Function]}
+              type="button"
+              value="x"
+            >
+              x
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button
+              id="btn-4"
+              name="4"
+              onClick={[Function]}
+              type="button"
+              value="4"
+            >
+              4
+            </button>
+          </td>
+          <td>
+            <button
+              id="btn-5"
+              name="5"
+              onClick={[Function]}
+              type="button"
+              value="5"
+            >
+              5
+            </button>
+          </td>
+          <td>
+            <button
+              id="btn-6"
+              name="6"
+              onClick={[Function]}
+              type="button"
+              value="6"
+            >
+              6
+            </button>
+          </td>
+          <td
+            className="orange"
+          >
+            <button
+              id="btn--"
+              name="-"
+              onClick={[Function]}
+              type="button"
+              value="-"
+            >
+              -
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button
+              id="btn-1"
+              name="1"
+              onClick={[Function]}
+              type="button"
+              value="1"
+            >
+              1
+            </button>
+          </td>
+          <td>
+            <button
+              id="btn-2"
+              name="2"
+              onClick={[Function]}
+              type="button"
+              value="2"
+            >
+              2
+            </button>
+          </td>
+          <td>
+            <button
+              id="btn-3"
+              name="3"
+              onClick={[Function]}
+              type="button"
+              value="3"
+            >
+              3
+            </button>
+          </td>
+          <td
+            className="orange"
+          >
+            <button
+              id="btn-+"
+              name="+"
+              onClick={[Function]}
+              type="button"
+              value="+"
+            >
+              +
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td
+            colSpan="2"
+          >
+            <button
+              id="btn-0"
+              name="0"
+              onClick={[Function]}
+              type="button"
+              value="0"
+            >
+              0
+            </button>
+          </td>
+          <td>
+            <button
+              id="btn-."
+              name="."
+              onClick={[Function]}
+              type="button"
+              value="."
+            >
+              .
+            </button>
+          </td>
+          <td
+            className="orange"
+          >
+            <button
+              id="btn-="
+              name="="
+              onClick={[Function]}
+              type="button"
+              value="="
+            >
+              =
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Home Renders the Home 1`] = `
+<div
+  className="home_cnt"
+>
+  <h1>
+    Welcome to our page!
+  </h1>
+  <p>
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  </p>
+  <p>
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  </p>
+</div>
+`;
+
+exports[`Quote Renders the Quote 1`] = `
+<div
+  className="quote_cnt"
+>
+  <h2>
+    At last I will devote myself sincerely and without reservation to the general demolition of my opinions. ― Rene Descartes
+  </h2>
+</div>
+`;

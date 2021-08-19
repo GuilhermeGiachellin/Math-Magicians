@@ -40,7 +40,7 @@ export default function Calculator() {
               <table>
                   <tbody>
               <tr>
-                  <td colSpan="4" className="display">{obj.next === null ? obj.total : obj.next}
+                  <td colSpan="4" className="display" id="display">{obj.next === null ? obj.total : obj.next}
                   </td>
               </tr>
               <tr>
